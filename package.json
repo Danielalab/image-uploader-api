@@ -1,0 +1,21 @@
+{
+  "name": "image-uploader-api",
+  "version": "1.0.0",
+  "description": "A API to save images.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "mongoDB",
+    "multer",
+    "Firebase Storage"
+  ],
+  "author": "Daniela Gonzales",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
