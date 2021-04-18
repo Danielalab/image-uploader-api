@@ -1,9 +1,18 @@
-const upload = require('../storage/disk');
+const uploadDisk = require('../storage/disk');
 
 const routes = (app) => {
-  app.post('/images', upload.single('image'), (req, resp) => {
-    console.log(req.file, req.body);
-    resp.send('hello world');
+  app.post('/images', uploadDisk.single('image'), async (req, resp) => {
+    const { file } = req;
+
+    const result = {
+      "name": file.originalname,
+      "url": { 
+          "url": file.path,
+          "_id": file.filename,
+        }
+    }
+
+    resp.send(result);
   });
 };
 

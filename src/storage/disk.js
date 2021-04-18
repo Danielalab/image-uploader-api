@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
     extension for you, your function should
     return a filename complete with an file
     extension. */
-    cb(null, file.originalname)
+    cb(null, + new Date() + file.originalname)
   }
 })
 
