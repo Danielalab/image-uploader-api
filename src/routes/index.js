@@ -6,11 +6,9 @@ const routes = (app) => {
 
     const result = {
       "name": file.originalname,
-      "url": { 
-          "url": file.path,
-          "_id": file.filename,
-        }
-    }
+      "url": file.path,
+      "_id": 1,
+    };
 
     resp.send(result);
   });
