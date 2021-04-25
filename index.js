@@ -4,8 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const routes = require('./src/routes/index');
-const { client } = require('./config');
-const port = 8080;
+const { client, port } = require('./config');
 
 /* Note: I can't use app.use(express.json())
 because it only parsers JSON payloads
