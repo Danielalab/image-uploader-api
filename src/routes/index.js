@@ -12,6 +12,13 @@ const routes = (app) => {
 
     resp.send(result);
   });
+
+  app.get('/', (req, resp) => {
+    resp.send({
+      "name": "image-uploader-api",
+      "version": "1.0.0",
+    })
+  })
 };
 
 module.exports = routes;
